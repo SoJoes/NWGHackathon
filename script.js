@@ -79,6 +79,5 @@ function increment() {
 	}
 }
 
-var ClickMe = document.getElementById()
 
 
