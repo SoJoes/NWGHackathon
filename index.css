@@ -12,10 +12,10 @@
   box-sizing: border-box;
 }
 
-body {
-  min-width: 50px;
+/* body {
+  min-width: 500px;
   max-height: none;
-}
+} */
 /* Remove margins and padding from the list */
 ul {
   margin: 0;

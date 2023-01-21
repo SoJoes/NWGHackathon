@@ -79,6 +79,37 @@ function increment() {
 	}
 }
 
+function ssh() {
+  function onload() {
+    const position = {
+      x: 0,
+      y: 0,
+    };
+    const pet = document.createElement('div');
+    pet.id = "mypet";
+    updatePosition(100, 100);
+    pet.classList.add('ssh-pet');
+    document.body.appendChild(pet);
+
+    function updatePosition(x, y) {
+      pet.style.left = (position.x = x) + 'px';
+      pet.style.top = (position.y = y) + 'px';
+    }
+  }
+  window.addEventListener('load', onload);
+}
+
+// make script
+let script = document.createElement('script');
+script.type = 'text/javascript';
+script.text = `(${ssh.toString()})()`;
+// when script is loaded, remove yourself
+script.onload = function() {
+  this.parentNode.removeChild(this);
+};
+// append script to webpage
+(document.head || document.documentElement).appendChild(script);
+
 var 
 
 
