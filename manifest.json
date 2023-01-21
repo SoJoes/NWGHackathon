@@ -1,17 +1,8 @@
 {
-    "name": "Jacana",
-    "version": "1.0.0",
-    "description": "water wastage extension",
-    "manifest_version": 3,
-    "author": "Sorcha Corrigan",
-    "web_accessible_resources": ["images/*"],
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "Latest Covid Report",
-        "js": ["script2.js"],
-        "css": ["index.css"],
-        "run_at": "document_start"
-    },
+  "manifest_version": 2,
+  "name": "Super Silly Hackathon",
+  "description": "Super Silly Hackathon",
+  "version": "1.0.0",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
