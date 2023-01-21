@@ -1,8 +1,13 @@
-function onload(){
-    const pet = document.createElement('div');
-    updatePosition(100,100);
-    pet.classList.add('ssh-pet');
-    document.body.appendChild(pet);
+function reddenPage(){
+    document.body.style.backgroundColor = "red";
+    console.log("HI");
 }
 
-window.addEventListener('load', onload)
+chrome.action.onClicked.addListener((tab) => {
+    if(!tab.url.includes("chrome://")){
+        chrome.scripting.executeScript({
+            target:{ tabId: tab.id},
+            function: reddenPage
+        });
+    }
+})

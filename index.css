@@ -6,4 +6,13 @@
       radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
     background-blend-mode: screen, color-dodge, overlay, difference, normal;
   }
-  
+
+.ssh-pet{
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 1000;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images/jacana0000.png');
+  background-size: 30px 30px;
+  background-position: 0 0;
+}
