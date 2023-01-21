@@ -77,6 +77,10 @@ function increment() {
 		alert("Progress Complete!");
         // Evolve function here
 	}
+
+    if (j >= 100) {
+        
+    }
 }
 
 
