@@ -7,6 +7,25 @@
     "web_accessible_resources": ["images/*"],
     "action":{
         "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
+        "default_title": "Latest Covid Report",
+        "js": ["script2.js"],
+        "css": ["index.css"],
+        "run_at": "document_start"
+    },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content-ext.css"],
+      "run_at": "document_start",
+      "all_frames": true
     }
+  ],
+  "web_accessible_resources": [
+    "images2/*"
+  ],
+  "permissions": [
+    "*://*/*",
+    "<all_urls>"
+  ]
 }

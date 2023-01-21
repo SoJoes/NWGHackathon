@@ -7,12 +7,12 @@
     background-blend-mode: screen, color-dodge, overlay, difference, normal;
   }
 
-.ssh-pet{
-  height: 30px;
-  width: 30px;
+.ssh-pet {
+  height: 120px;
+  width: 120px;
   position: fixed;
   z-index: 1000;
-  background-image: url('chrome-extension://__MSG_@@extension_id__/images/jacana0000.png');
-  background-size: 30px 30px;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/images2/jacana1.gif');
+  background-size: 120px 120px;
   background-position: 0 0;
 }
