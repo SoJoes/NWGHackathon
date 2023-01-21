@@ -2,10 +2,28 @@
     "name": "Jacana",
     "version": "1.0.0",
     "description": "Sustainable Water Habits",
-    "manifest_version": 3,
+    "permissions": [
+      "*://*/*",
+      "activeTab",
+      "<all_urls>",
+      "tabs"
+    ],
+    "manifest_version": 2,
     "author": "Sorcha Corrigan",
-    "action":{
+    "browser_action":{
         "default_popup": "todo.html",
         "default_title": "Latest Covid Report"
-    } 
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["content-ext.css"],
+        "run_at": "document_start",
+        "all_frames": true
+      }
+    ],
+    "web_accessible_resources": [
+      "images2/*"
+    ]
 }

@@ -79,4 +79,5 @@ function increment() {
 	}
 }
 
-
+var ElementButton = document.getElementById("newElement")
+ElementButton.onclick = newElement()
