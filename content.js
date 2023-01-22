@@ -8,18 +8,36 @@ function ssh() {
       x: 0,
       y: 0,
     };
-    const pet = document.createElement('div');
-    pet.id = "mypet";
-    updatePosition(100, 100);
-    pet.classList.add('ssh-pet');
+    window.pet = document.createElement('div');
+    window.pet.id = "mypet";
+    window.pet.style.left = "100px";
+    window.pet.style.top = "100px";
+    window.pet.classList.add('ssh-pet');
     document.body.appendChild(pet);
+    window.pet.addEventListener('mousedown', function(){
+        window.addEventListener('mousemove', divMove, true);
+        console.log("B");
+    });
+    console.log("here");
 
-    function updatePosition(x, y) {
-      pet.style.left = (position.x = x) + 'px';
-      pet.style.top = (position.y = y) + 'px';
+    function mouseDown(e){
+        window.addEventListener('mousemove', divMove, true);
+        console.log("B");
     }
   }
+    function divMove(e){
+        window.pet.style.left = e.clientX + 'px';
+        window.pet.style.top = e.clientY + 'px';
+        console.log("D");
+    }
+
+    function mouseUp(){
+        window.removeEventListener('mousemove', divMove, true);
+        console.log("C");
+    }
   window.addEventListener('load', onload);
+  window.addEventListener('mouseup', mouseUp, false);
+  console.log("A");
 }
 
 let script = document.createElement('script');
