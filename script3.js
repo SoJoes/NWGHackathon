@@ -84,6 +84,12 @@ function increment() {
       document.getElementById("JacanaHolder").innerHTML = "<img src=images\jacana2.gif id='Jacana'>"
     };
   }
+  chrome.storage.sync.set({'level': j, 'bar': 'hi'}, function() {
+    console.log('Settings saved');
+  });
+  chrome.storage.sync.get(['level', 'bar', 'poo'], function(items) {
+    console.log('Settings retrieved', items);
+  });
 }
 
 
@@ -116,3 +122,4 @@ ElementButton.onclick = function() {
     };
   }
 }
+

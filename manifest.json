@@ -6,7 +6,8 @@
       "*://*/*",
       "activeTab",
       "<all_urls>",
-      "tabs"
+      "tabs",
+      "storage"
     ],
     "manifest_version": 2,
     "author": "Sorcha Corrigan",
