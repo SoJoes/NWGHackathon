@@ -19,7 +19,7 @@
       {
         "matches": ["<all_urls>"],
         "js": ["content.js"],
-        "css": ["index.css"],
+        "css": ["pet.css"],
         "run_at": "document_start",
         "all_frames": true
       }

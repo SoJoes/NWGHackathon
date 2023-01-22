@@ -1,13 +1,5 @@
 function ssh() {
   function onload() {
-    const size = {
-      height: 120,
-      width: 120,
-    };
-    const position = {
-      x: 0,
-      y: 0,
-    };
     window.pet = document.createElement('div');
     window.pet.id = "mypet";
     window.pet.style.left = "100px";
