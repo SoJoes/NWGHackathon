@@ -5,9 +5,12 @@
 }
 
 body {
-  min-width: 500px;
+  min-width: 3rem;
   max-height: none;
-} */
+  background-color: #7d9a70;
+  font-size: 1rem;
+}
+
 /* Remove margins and padding from the list */
 ul {
   margin: 0;
@@ -18,10 +21,15 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 0.4rem;
+  padding-right: 1.4rem;
   background: #eee;
-  font-size: 18px;
   transition: 0.2s;
+  list-style-type: none;
+  border-radius: 15px;
+  margin: 10px;
+  width: 90%;
+  padding-left: 2rem;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -42,7 +50,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #888;
+  background: #7d9a50;
   color: #fff;
   text-decoration: line-through;
 }
@@ -66,18 +74,20 @@ ul li.checked::before {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 12px 16px 12px 16px;
+  padding: 1rem;
 }
 
 .close:hover {
-  background-color: #81c086;
+  background-color: #FFc086;
   color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 100%;
 }
 
 /* Style the header */
 .header {
   background-color: #ffffff;
-  padding: 30px 40px;
   color: white;
   text-align: center;
 }
@@ -102,8 +112,11 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
-  padding: 10px;
-  width: 25%;
+  padding-left: 0.01rem;
+  padding-top: 0.3rem;
+  margin-left: 5%;
+  width: 20%;
+  height: 2.3rem;
   background: #d9d9d9;
   color: #555;
   float: left;
@@ -111,9 +124,25 @@ input {
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
+  border-radius: 5px;
+  float: left;
 }
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+img{
+  height: 9rem;
+}
+
+.card{
+    padding: 0px;
+    width: 23rem;
+}
+
+.form-select{
+    font-size: 1rem;
+    width: 70%;
+    float: left;
 }
