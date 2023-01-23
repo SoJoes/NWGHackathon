@@ -29,6 +29,7 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
+    increment();
   }
 }, false);
 
@@ -55,7 +56,6 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-      increment()
     };
   }
 }
@@ -128,7 +128,6 @@ ElementButton.onclick = function() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-      increment()
     };
   }
 }
