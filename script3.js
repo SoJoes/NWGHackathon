@@ -1,3 +1,8 @@
+document.getElementById("Jacana2").style.display = "none";
+document.getElementById("Jacana3").style.display = "none";
+document.getElementById("Jacana").style.display= "block";
+
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -74,16 +79,21 @@ function increment() {
         j = j.toString()
         setProgress(j);	
 	}else{
-		alert("Progress Complete!");
+    if(document.getElementById("Jacana").style.display== "block") {
+      document.getElementById("Jacana").style.display = "none";
+      document.getElementById("Jacana3").style.display = "none";
+      document.getElementById("Jacana2").style.display= "block";
+    }else if( document.getElementById("Jacana2").style.display== "block"){
+      document.getElementById("Jacana").style.display = "none";
+      document.getElementById("Jacana3").style.display = "block";
+      document.getElementById("Jacana2").style.display= "none";
+    }
+   
+		alert("Jacana Evolved!");
+    setProgress("0")
         // Evolve function here
 	}
-  BirdImage = document.getElementById("Jacana");
-  j = parseInt(j);
-  if (j >= 100) {
-    if (BirdImage.src == "images\jacana1.gif") {
-      document.getElementById("JacanaHolder").innerHTML = "<img src=images\jacana2.gif id='Jacana'>"
-    };
-  }
+  
   chrome.storage.sync.set({'level': j, 'bar': 'hi'}, function() {
     console.log('Settings saved');
   });
@@ -121,5 +131,24 @@ ElementButton.onclick = function() {
       increment()
     };
   }
+}
+
+
+
+var pages = document.getElementsByClassName("Main");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < pages.length; i++) {
+  pages[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
 }
 
